@@ -1,0 +1,58 @@
+/*
+Lightbox
+ */
+
+.lightbox{
+  visibility: hidden;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  margin: 5.5rem 0;
+
+  &__big {
+    width: 34.375rem;
+    height: 34.375rem;
+    border-radius: 1rem;
+    object-fit: cover;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    position: absolute;
+    top: 50%;
+    background-color: $white;
+    border-radius: 50%;
+  }
+
+  &__previous {
+    left: 0;
+    transform: translateX(-50%) translateY(-100%);
+  }
+
+
+  &__next {
+    right: 0;
+    transform: translateX(50%) translateY(-100%);
+  }
+}

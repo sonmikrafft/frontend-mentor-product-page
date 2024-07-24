@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Font Kumbh Sans-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="app/scss/style.css">
+  <script defer src="./app/js/script.js" type="module"></script>
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="overlay mobile-fade"></div>
+  <nav>
+    <div class="nav__item">
+      <!-- Hamburger Menu-->
+      <a id="btnHamburger" href="#" class="header__toggle open hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
+      <!-- Logo-->
+      <a href="/" class="header__logo">
+        <img src="images/logo.svg" alt="Logo"/>
+      </a>
+
+      <!-- Desktop Menu-->
+      <div class="header__links hide-for-mobile">
+        <a href="#">Collection</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+   <div class="nav__item">
+     <div id="cartBtn" class="header__cart">
+       <div class="header__quantity">0</div>
+       <img src="images/icon-cart.svg" alt="Cart Icon">
+     </div>
+     <div class="header__avatar">
+       <img src="images/image-avatar.png" alt="Avatar Icon">
+     </div>
+   </div>
+  </nav>
+
+  <!-- Mobile Menu-->
+  <div class="header__menu mobile-fade">
+    <a href="#">Collection</a>
+    <a href="#">Men</a>
+    <a href="#">Women</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+</header>
+
+<main class="grid">
+  <!-- Cart Card -->
+  <div id="cart" class="cart hidden">
+    <div class="cart__title">Cart</div>
+    <div class="cart__content">
+    </div>
+  </div>
+
+  <!-- Preview -->
+  <div class="preview">
+    <div class="preview__mobile hide-for-desktop">
+      <div id="previewMobile" class="preview__image"></div>
+      <div>
+        <div id="previousBtnMobile" class="preview__arrows preview__previous">
+          <img src="images/icon-previous.svg" alt="Previous Icon">
+        </div>
+        <div id="nextBtnMobile" class="preview__arrows preview__next">
+          <img src="images/icon-next.svg" alt="Next Icon">
+        </div>
+      </div>
+    </div>
+    <div class="preview__desktop hide-for-mobile">
+      <div id="previewBig" class="preview__big"></div>
+
+      <div class="thumbnails">
+        <div id="thumbnail1" class="thumbnail">
+          <img src="images/image-product-1-thumbnail.jpg" alt="Thumbnail 1">
+        </div>
+
+        <div id="thumbnail2" class="thumbnail">
+          <img src="images/image-product-2-thumbnail.jpg" alt="Thumbnail 1">
+        </div>
+
+        <div id="thumbnail3" class="thumbnail">
+          <img src="images/image-product-3-thumbnail.jpg" alt="Thumbnail 1">
+        </div>
+
+        <div id="thumbnail4" class="thumbnail">
+          <img src="images/image-product-4-thumbnail.jpg" alt="Thumbnail 1">
+        </div>
+      </div>
+
+
+      <!-- Lightbox-->
+      <div class="overlay desktop-fade"></div>
+      <div class="lightbox desktop-fade hide-for-mobile">
+
+        <!-- User Interactions -->
+        <div class="lightbox__menu">
+          <div id="previousBtn" class="lightbox__arrows lightbox__previous">
+            <img src="images/icon-previous.svg" alt="Previous Icon">
+          </div>
+          <div id="nextBtn" class="lightbox__arrows lightbox__next">
+            <img src="images/icon-next.svg" alt="Next Icon">
+          </div>
+          <div id="closeBtn" class="close-button">
+            <img src="images/icon-close.svg" alt="Close Icon">
+          </div>
+        </div>
+
+        <!-- Big Picture -->
+        <div id="lightboxPreviewBig" class="lightbox__big">
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="thumbnails">
+          <div id="lightboxThumbnail1" class="thumbnail">
+            <img src="images/image-product-1-thumbnail.jpg" alt="Thumbnail 1">
+          </div>
+
+          <div id="lightboxThumbnail2" class="thumbnail">
+            <img src="images/image-product-2-thumbnail.jpg" alt="Thumbnail 1">
+          </div>
+
+          <div id="lightboxThumbnail3" class="thumbnail">
+            <img src="images/image-product-3-thumbnail.jpg" alt="Thumbnail 1">
+          </div>
+
+          <div id="lightboxThumbnail4" class="thumbnail">
+            <img src="images/image-product-4-thumbnail.jpg" alt="Thumbnail 1">
+          </div>
+        </div>
+       </div>
+    </div>
+  </div>
+
+  <!-- Details -->
+  <div class="details">
+    <div class="details__company">Sneaker Company</div>
+    <h1 class="details__title">Fall Limited Edition Sneakers</h1>
+    <p class="details__description">
+      These low-profile sneakers are your perfect casual wear companion. Featuring a
+      durable rubber outer sole, they’ll withstand everything the weather can offer.
+    </p>
+    <div class="details__price">
+      <div class="price__item">
+        <div class="price__new">$125.00</div>
+        <div class="price__discount">50%</div>
+      </div>
+      <div class="price__item price__old">$250.00</div>
+    </div>
+
+    <div class="details__cart">
+      <div class="cart__quantity">
+        <button id="decreaseBtn" class="icon-button">
+          <img src="images/icon-minus.svg" alt="Minus Icon">
+        </button>
+        <input id="quantity" type="number" value="0">
+        <button id="increaseBtn" class="icon-button">
+          <img src="images/icon-plus.svg" alt="Plus Icon">
+        </button>
+      </div>
+      <button id="addBtn" class="cart__add">
+        <img src="images/icon-cart.svg" alt="Cart Icon" class="black-icon">
+        Add to cart
+      </button>
+    </div>
+  </div>
+</main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/sonmikrafft">Sonja Krafft</a>.
+    </p>
+  </footer>
+</body>
+</html>

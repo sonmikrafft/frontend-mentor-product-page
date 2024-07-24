@@ -1,0 +1,101 @@
+.grid {
+  display: grid;
+  position: relative;
+}
+
+/*
+Details
+ */
+.details {
+
+  &__company {
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: $font-s;
+    letter-spacing: .1rem;
+  }
+
+  &__description {
+    padding: 1rem 0;
+  }
+
+  &__price {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__cart {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+/*
+Prices
+ */
+.price {
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__new {
+    font-size: $font-h1-s;
+  }
+
+  &__discount {
+    padding: 0.25rem 0.75rem;
+    background-color: $very-dark-blue;
+    border-radius: 0.5rem;
+    color: $white;
+  }
+
+  &__old {
+    text-decoration: line-through;
+  }
+
+}
+
+/*
+Quantity and Add to Cart Button
+ */
+.cart {
+  &__quantity {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background-color: $light-grayish-blue;
+    border-radius: 0.5rem;
+
+    .icon-button {
+      background: transparent;
+      width: 0.75rem;
+      padding: 0;
+    }
+
+    input {
+      width: 6rem;
+      font: inherit;
+      text-align: center;
+      border: none;
+      outline: none;
+      background: none;
+      box-shadow: none;
+    }
+
+  }
+
+  &__add {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    .black-icon {
+      filter: brightness(0);
+    }
+  }
+}
